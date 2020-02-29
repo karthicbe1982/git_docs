@@ -140,13 +140,13 @@ master
 
 Once the task done on user-profile , we have to update  on master branch changes made in user-profile
 
-# git checkout master
+### git checkout master
 
-# git merge user-profile
+### git merge user-profile
 
 Delete the branch
 
-# git branch -d user-profile
+### git branch -d user-profile
 
 ## Rebase
 
