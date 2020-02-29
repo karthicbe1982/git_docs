@@ -152,26 +152,25 @@ Delete the branch
 
 Before megre , we have to do rebase from master
 
-$ git checkout master
+### git checkout master
 
-$ git rebase master app
+### git rebase master app
 
-==============================Stashing your work==============================
+## Stashing your work
 
 The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy.
 
-$ git status
+### git status
 
-===================Re-applying your stashed changes=====================
+## Re-applying your stashed changes
 
 Popping your stash removes the changes from your stash and reapplies them to your working copy
 
-$ git stash pop
-
+### git stash pop
 
 Alternatively, you can reapply the changes to your working copy and keep them in your stash with 
 
-$git stash apply
+### git stash apply
 
 Stashing untracked or ignored files
 
@@ -188,46 +187,40 @@ But it will not stash:
 
 Adding the -u option (or --include-untracked) tells git stash to also stash your untracked files:
 
-$ git stash -u
-
-
+### git stash -u
 
 Managing multiple stashes
 
-$ git stash list
+### git stash list
 
 To provide a bit more context, it's good practice to annotate your stashes with a description, using 
 
-$ git stash save "message":
+### git stash save "message":
 
 You can choose which stash to re-apply by passing its identifier as the last argument, for example:
 
+#### git stash pop stash@{2}
 
-$ git stash pop stash@{2}
-
-
-$ git stash show -p
-
+### git stash show -p
 
 If you decide you no longer need a particular stash, you can delete it with 
 
-$ git stash drop stash@{1}
+### git stash drop stash@{1}
 
 Or you can delete all of your stashes with
 
-$ git stash clear
+### git stash clear
+
+## .gitignore
 
 
-==============================================.gitignore========================================
-
-
-1.    tracked - a file which has been previously staged or committed;
-2.    untracked - a file which has not been staged or committed; or
-3.    ignored - a file which Git has been explicitly told to ignore.
+          1.    tracked - a file which has been previously staged or committed;
+          2.    untracked - a file which has not been staged or committed; or
+          3.    ignored - a file which Git has been explicitly told to ignore.
 
 Global Git ignore rules
 
-$ git config --global core.excludesFile ~/.gitignore
+### git config --global core.excludesFile ~/.gitignore
 
 
 
