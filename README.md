@@ -1,6 +1,6 @@
-## Welcome to Git Docs
+# Welcome to Git Docs
 
-# What's Git?
+## What's Git?
 
 Git is a distributed version control system (DVCS). "Distributed" means that all developers within a team have a complete version of the project. A version control system is simply software that lets you effectively manage application versions. Thanks to Git, you'll be able to do the following:
 
@@ -18,7 +18,7 @@ In the real world, you can't have exactly the same stuff at home and in a storeh
 
 Remote storehouses (repositories like GitHub or BitBucket) store exactly the same code that you have in your local repository (on your home computer). If your code disappears from your local repository, you can restore absolutely the same code from a remote repository. A remote repository also serves as a central hub to which members of a web development team can connect to access project code
 
-# Configuring Git
+## Configuring Git
 When you come to a bank for the first time and ask to store your money there, they give you a bunch of paperwork to fill out. Before you can use banking services, you have to register with the bank. Git wants you to do the same (register with Git) before you start using a repository.
 
 To tell Git who you are, run the following two commands:
@@ -52,7 +52,7 @@ Initial commit
 nothing to commit (create/copy files and use "git add" to track)
 
 
-# Staging Files with Git
+## Staging Files with Git
 
 To let Git track files for a commit, we need to run the following in the terminal:
 
@@ -84,7 +84,7 @@ To Remove the File before change or Un-tracked
 
 ### git checkout file
 
-# Reset
+## Reset
 
 Reset current HEAD to the specified state ( It wont capture any log "git log")
 
@@ -100,13 +100,13 @@ HARD ---> Will delete the file from working directory
 
 ### git reset --hard SSA ID
 
-# Remove or Delete Un-tracked file
+## Remove or Delete Un-tracked file
 
 ### git clean -df 
 
 ### rm -rf
 
-# Git Commands for Working with Branches
+## Git Commands for Working with Branches
 
 The reason why we use branches lies on the surface. If you have a stable, working application, you don't want to break it when developing a new feature. Therefore, it's best to have two branches: one branch with a stable app and another one for developing features. Then again, when you complete a feature and it seems to be working, some bug may still be there. And bugs must not appear in a production-ready version. Thus, you'll want to have another branch for testing.
 
@@ -136,7 +136,7 @@ Switched to branch 'user-profile'". Let's run "git branch" once more to prove th
 master
 *user-profile
 
-# Merge 
+## Merge 
 
 Once the task done on user-profile , we have to update  on master branch changes made in user-profile
 
@@ -148,7 +148,7 @@ Delete the branch
 
 # git branch -d user-profile
 
-# Rebase
+## Rebase
 
 Before megre , we have to do rebase from master
 
