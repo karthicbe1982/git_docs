@@ -88,23 +88,19 @@ To Remove the File before change or Un-tracked
 
 Reset current HEAD to the specified state ( It wont capture any log "git log")
 
-Soft ----> Will reset to Stage area
+    Soft ----> Will reset to Stage area
+    $ git reset --soft SSA ID
 
-### git reset --soft SSA ID
+    Mixed ----->  Will reset to Untracked area
+    $ git reset --mixed SSA ID
 
-Mixed ----->  Will reset to Untracked area
-
-### git reset --mixed SSA ID
-
-HARD ---> Will delete the file from working directory 
-
-### git reset --hard SSA ID
+    HARD ---> Will delete the file from working directory 
+    $ git reset --hard SSA ID
 
 ## Remove or Delete Un-tracked file
 
-### git clean -df 
-
-### rm -rf
+    $ git clean -df 
+    $ rm -rf
 
 ## Git Commands for Working with Branches
 
@@ -113,64 +109,64 @@ The reason why we use branches lies on the surface. If you have a stable, workin
 
 That's it: one command, "branch", will ask Git to list all branches
 
-### git branch
+    $ git branch
 
 The "branch" command creates a new branch with the name we gave it: "user-profile
 
-### git branch user-profile
+    $ git branch user-profile
 
 Let's run the "git branch" command once more:
 
 The output will be the following:
 
-### git branch
-*master
-user-profile
+    $ git branch
+     *master
+      user-profile
 
 you'll need to use "checkout" to switch 
 
-### git checkout user-profile
+    $ git checkout user-profile
 
 Switched to branch 'user-profile'". Let's run "git branch" once more to prove that:
 
-master
-*user-profile
+     master
+    *user-profile
 
 ## Merge 
 
 Once the task done on user-profile , we have to update  on master branch changes made in user-profile
 
-### git checkout master
+    $ git checkout master
 
-### git merge user-profile
+    # git merge user-profile
 
 Delete the branch
 
-### git branch -d user-profile
+    # git branch -d user-profile
 
 ## Rebase
 
 Before megre , we have to do rebase from master
 
-### git checkout master
+    $ git checkout master
 
-### git rebase master app
+    $ git rebase master app
 
 ## Stashing your work
 
 The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy.
 
-### git status
+    $ git status
 
 ## Re-applying your stashed changes
 
 Popping your stash removes the changes from your stash and reapplies them to your working copy
 
-### git stash pop
+    $ git stash pop
 
 Alternatively, you can reapply the changes to your working copy and keep them in your stash with 
 
-### git stash apply
+    $ git stash apply
 
 Stashing untracked or ignored files
 
@@ -187,32 +183,31 @@ But it will not stash:
 
 Adding the -u option (or --include-untracked) tells git stash to also stash your untracked files:
 
-### git stash -u
+    $ git stash -u
 
 Managing multiple stashes
 
-### git stash list
+    $ git stash list
 
 To provide a bit more context, it's good practice to annotate your stashes with a description, using 
 
-### git stash save "message":
+    $ git stash save "message":
 
 You can choose which stash to re-apply by passing its identifier as the last argument, for example:
 
-#### git stash pop stash@{2}
+    $ git stash pop stash@{2}
 
-### git stash show -p
+    $ git stash show -p
 
 If you decide you no longer need a particular stash, you can delete it with 
 
-### git stash drop stash@{1}
+    $ git stash drop stash@{1}
 
 Or you can delete all of your stashes with
 
-### git stash clear
+    $ git stash clear
 
-## .gitignore
-
+    $ .gitignore
 
       1.    tracked - a file which has been previously staged or committed;
       2.    untracked - a file which has not been staged or committed; or
@@ -220,7 +215,7 @@ Or you can delete all of your stashes with
 
 Global Git ignore rules
 
-### git config --global core.excludesFile ~/.gitignore
+    $ git config --global core.excludesFile ~/.gitignore
 
 
 
