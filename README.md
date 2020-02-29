@@ -1,4 +1,4 @@
-### Welcome to Git Docs
+## Welcome to Git Docs
 
 # What's Git?
 
@@ -106,49 +106,49 @@ HARD ---> Will delete the file from working directory
 
 ### rm -rf
 
-====================================Git Commands for Working with Branches==========================
+# Git Commands for Working with Branches
 
 The reason why we use branches lies on the surface. If you have a stable, working application, you don't want to break it when developing a new feature. Therefore, it's best to have two branches: one branch with a stable app and another one for developing features. Then again, when you complete a feature and it seems to be working, some bug may still be there. And bugs must not appear in a production-ready version. Thus, you'll want to have another branch for testing.
 
 
 That's it: one command, "branch", will ask Git to list all branches
 
-$ git branch
+### git branch
 
 The "branch" command creates a new branch with the name we gave it: "user-profile
 
-$ git branch user-profile
+### git branch user-profile
 
 Let's run the "git branch" command once more:
 
 The output will be the following:
 
-$ git branch
+### git branch
 *master
 user-profile
 
 you'll need to use "checkout" to switch 
 
-$ git checkout user-profile
+### git checkout user-profile
 
 Switched to branch 'user-profile'". Let's run "git branch" once more to prove that:
 
 master
 *user-profile
 
-=================================Merge ============================================
+# Merge 
 
 Once the task done on user-profile , we have to update  on master branch changes made in user-profile
 
-$ git checkout master
+# git checkout master
 
-$ git merge user-profile
+# git merge user-profile
 
 Delete the branch
 
-$ git branch -d user-profile
+# git branch -d user-profile
 
-===============================Rebase=====================================
+# Rebase
 
 Before megre , we have to do rebase from master
 
