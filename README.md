@@ -23,8 +23,8 @@ When you come to a bank for the first time and ask to store your money there, th
 
 To tell Git who you are, run the following two commands:
 
-### git config --global user.name "Karthick Krishnaswamy"
-### git config --global user.email "karthicbe1@gmail.com"
+         $ git config --global user.name "Karthick Krishnaswamy"
+         $ git config --global user.email "karthicbe1@gmail.com"
 
 Since you'll see the output from many Git commands in the terminal, it's best to have some pretty colors for the output. To turn on code highlighting, just run the following command:
 
