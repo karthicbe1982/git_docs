@@ -18,17 +18,17 @@ In the real world, you can't have exactly the same stuff at home and in a storeh
 
 Remote storehouses (repositories like GitHub or BitBucket) store exactly the same code that you have in your local repository (on your home computer). If your code disappears from your local repository, you can restore absolutely the same code from a remote repository. A remote repository also serves as a central hub to which members of a web development team can connect to access project code
 
-### Configuring Git
+# Configuring Git
 When you come to a bank for the first time and ask to store your money there, they give you a bunch of paperwork to fill out. Before you can use banking services, you have to register with the bank. Git wants you to do the same (register with Git) before you start using a repository.
 
 To tell Git who you are, run the following two commands:
 
-$ git config --global user.name "Karthick Krishnaswamy"
-$ git config --global user.email "karthicbe1@gmail.com"
+### git config --global user.name "Karthick Krishnaswamy"
+### git config --global user.email "karthicbe1@gmail.com"
 
 Since you'll see the output from many Git commands in the terminal, it's best to have some pretty colors for the output. To turn on code highlighting, just run the following command:
 
-git config --global color.ui true
+### git config --global color.ui true
 
 The last basic configuration command will let you view your Git configurations. Running this command is the same as asking for a copy of your contract:
 
@@ -86,32 +86,4 @@ To Remove the File before change or Un-tracked
 $ git checkout file
 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/karthicbe1982/karthick.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
