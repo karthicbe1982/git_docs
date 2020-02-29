@@ -214,9 +214,9 @@ Or you can delete all of your stashes with
 ## .gitignore
 
 
-          1.    tracked - a file which has been previously staged or committed;
-          2.    untracked - a file which has not been staged or committed; or
-          3.    ignored - a file which Git has been explicitly told to ignore.
+      1.    tracked - a file which has been previously staged or committed;
+      2.    untracked - a file which has not been staged or committed; or
+      3.    ignored - a file which Git has been explicitly told to ignore.
 
 Global Git ignore rules
 
