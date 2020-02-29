@@ -56,9 +56,9 @@ nothing to commit (create/copy files and use "git add" to track)
 
 To let Git track files for a commit, we need to run the following in the terminal:
 
-# git add my_new_file.txt
+$ git add my_new_file.txt
 
-# git add my-file.ts another-file.js new_file.rb
+$ git add my-file.ts another-file.js new_file.rb
 
 $ git add .
 
