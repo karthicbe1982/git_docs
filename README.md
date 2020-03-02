@@ -43,7 +43,9 @@ Starting a New Local Repository with Git
 The "init" command stands for initialize. Once you run "git init", Git will initialize a hidden directory called ".git" in the project's root directory. 
 
     $ git init test
-Initialized empty Git repository in /home/kthiarck/Documents/Devops/git_test/test/.git/
+    
+![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/git_init.jpg)
+
 
 You'll run the command "git status" quite often. It's the same as calling a bank administrator to check if your things arrived or if anything has been moved to a different vault.
 
