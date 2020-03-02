@@ -36,7 +36,7 @@ The last basic configuration command will let you view your Git configurations. 
 
     $ git config --list
 
-![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/git_global.jpg)
+![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/global_config.jpg)
 
 Starting a New Local Repository with Git
 
