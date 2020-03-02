@@ -35,9 +35,8 @@ Since you'll see the output from many Git commands in the terminal, it's best to
 The last basic configuration command will let you view your Git configurations. Running this command is the same as asking for a copy of your contract:
 
     $ git config --list
-user.name=karthick krishnaswamy
-user.email=karthicbe1@gmail.com
-color.ui=true
+
+![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/git_global.jpg)
 
 Starting a New Local Repository with Git
 
