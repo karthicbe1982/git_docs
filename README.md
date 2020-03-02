@@ -50,9 +50,8 @@ The "init" command stands for initialize. Once you run "git init", Git will init
 You'll run the command "git status" quite often. It's the same as calling a bank administrator to check if your things arrived or if anything has been moved to a different vault.
 
     $ git status
-      On branch master
-      Initial commit
-      nothing to commit (create/copy files and use "git add" to track)
+    
+![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/git_status.jpg)
 
 
 ## Staging Files with Git
