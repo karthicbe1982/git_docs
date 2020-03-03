@@ -71,6 +71,8 @@ The option "--all" tells Git: "Find all new and updated files everywhere through
 Git can also take things out of its basket by removing files from the staging area. To remove files from the staging area, use the following command:
 
     $ git rm --cached my-file.ts
+    
+![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/git_cached.jpg)
 
 ## Committing Changes to Git
 
