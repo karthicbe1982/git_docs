@@ -51,35 +51,64 @@ The "init" command stands for initialize. Once you run "git init", Git will init
 You'll run the command "git status" quite often. It's the same as calling a bank administrator to check if your things arrived or if anything has been moved to a different vault.
 
     $ git status
-    
-![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/git_status.jpg)
+    # On branch master
+    #
+    # Initial commit
+    #
+      nothing to commit (create/copy files and use "git add" to track)
+  
 
 
 ## Staging Files with Git
 
 To let Git track files for a commit, we need to run the following in the terminal:
 
-    $ git add my_new_file.txt
+    $ git add my_new.txt
 
     $ git add my-file.ts another-file.js new_file.rb
 
     $ git add .
-
+    
+    $ git status
+    # On branch master
+    #
+    # Initial commit
+    #
+    # Changes to be committed:
+    #   (use "git rm --cached <file>..." to unstage)
+    #
+    #	new file:   my_file.txt
+    
 The option "--all" tells Git: "Find all new and updated files everywhere throughout the project and add them to the staging area." Note that you can also use the option "-A" instead of "--all". Thanks to this simple option, "-A" or "--all", the workflow is greatly simplified.
 
     $ git add --all
 
 Git can also take things out of its basket by removing files from the staging area. To remove files from the staging area, use the following command:
 
-    $ git rm --cached my-file.ts
-    
-![Image](https://raw.githubusercontent.com/karthicbe1982/git_docs/master/images/git_cached.jpg)
+    $ git rm --cached my-file.txt
+      rm 'my_file.txt'
+ 
+    $ git status
+    # On branch master
+    #
+    # Initial commit
+    #
+    # Untracked files:
+    #   (use "git add <file>..." to include in what will be committed)
+    #
+    #	my_file.txt
+      nothing added to commit but untracked files present (use "git add" to track)
+
 
 ## Committing Changes to Git
 
 To commit to a repository, use the "commit" command. Next, pass the "commit" command the "-m" option, which stands for "message". Lastly, type in your commit message. We wrote "Add three files" for our example, but it's recommended that you write more meaningful messages like "Add admin panel" or "Update admin panel". Note that we didn't use the past tense! A commit message must tell what your commit does – adds or removes files, updates app features, and so on.
 
-    $ git commit -m "Add three files"
+    $ git commit -m "First commit"
+      [master (root-commit) b05fb74] first commit
+      1 file changed, 1 insertion(+)
+      create mode 100644 my_file.txt
+
 
 how can we add modified files to the staging area and commit them at the same time. Git provides the following super command:
 
@@ -88,7 +117,35 @@ how can we add modified files to the staging area and commit them at the same ti
 To Remove the modified file before change or Un-tracked 
 
     $ git checkout file
+    
+    $ cat my_file.txt 
+      First commit
+      second commit
+      third commit
+      fourth commit  <---------- Added 
+      
+    $ git status
+    # On branch master
+    # Changes not staged for commit:
+    #   (use "git add <file>..." to update what will be committed)
+    #   (use "git checkout -- <file>..." to discard changes in working directory)
+    #
+    #	modified:   my_file.txt
+    #
+      no changes added to commit (use "git add" and/or "git commit -a")
 
+    $ git checkout my_file.txt
+ 
+    $ cat my_file.txt 
+      First commit
+      second commit
+      third commit
+
+    $ git status
+    # On branch master
+      nothing to commit, working directory clean
+ 
+    
 ## Reset
 
 Reset current HEAD to the specified state ( It wont capture any log "git log")
