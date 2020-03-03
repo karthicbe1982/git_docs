@@ -93,13 +93,13 @@ To Remove the modified file before change or Un-tracked
 Reset current HEAD to the specified state ( It wont capture any log "git log")
 
     Soft ----> Will reset to Stage area
-    $ git reset --soft SSA ID
+    $ git reset --soft SHA ID
 
     Mixed ----->  Will reset to Untracked area
-    $ git reset --mixed SSA ID
+    $ git reset --mixed SHA ID
 
     HARD ---> Will delete the file from working directory 
-    $ git reset --hard SSA ID
+    $ git reset --hard SHA ID
 
 ## Remove or Delete Un-tracked file
 
@@ -220,6 +220,54 @@ Or you can delete all of your stashes with
 Global Git ignore rules
 
     $ git config --global core.excludesFile ~/.gitignore
+
+##You can use git checkout to view the “Make some import changes to hello.txt” commit as follows: Viewing the Commit History
+
+When you run git log , you should get output that looks something like this:
+
+     $ git log
+       commit ca82a6dff817ec66f44342007202690a93763949
+       Author: Scott Chacon <schacon@gee-mail.com>
+       Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+
+
+A huge number and variety of options to the git log command are available to show you exactly what you’re looking for. Here, we’ll show you some of the most popular.
+
+One of the more helpful options is -p or --patch, which shows the difference (the patch output) introduced in each commit. You can also limit the number of log entries displayed, such as using -2 to show only the last two entries.
+
+     $ git log -p -2
+
+This option displays the same information but with a diff directly following each entry. This is very helpful for code review or to quickly browse what happened during a series of commits that a collaborator has added. You can also use a series of summarizing options with git log. For example, if you want to see some abbreviated stats for each commit, you can use the --stat option:
+
+     $ git log --stat
+
+As you can see, the --stat option prints below each commit entry a list of modified files, how many files were changed, and how many lines in those files were added and removed. It also puts a summary of the information at the end.
+
+Another really useful option is --pretty. This option changes the log output to formats other than the default. A few prebuilt options are available for you to use. The oneline option prints each commit on a single line, which is useful if you’re looking at a lot of commits. In addition, the short, full, and fuller options show the output in roughly the same format but with less or more information, respectively:
+
+     $ git log --pretty=oneline
+       ca82a6dff817ec66f44342007202690a93763949 changed the version number
+       085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 removed unnecessary test
+       a11bef06a3f659402fe7563abf99ad00de2209e6 first commit
+
+You may be wondering what the difference is between author and committer. The author is the person who originally wrote the work, whereas the committer is the person who last applied the work. So, if you send in a patch to a project and one of the core members applies the patch, both of you get credit — you as the author, and the core member as the committer. We’ll cover this distinction a bit more in Distributed Git.
+
+The oneline and format options are particularly useful with another log option called --graph. This option adds a nice little ASCII graph showing your branch and merge history:
+
+     $ git log --pretty=format:"%h %s" --graph
+     * 2d3acf9 ignore errors from SIGCHLD on trap
+     *  5e3ee11 Merge branch 'master' of git://github.com/dustin/grit
+     |\
+     | * 420eac9 Added a method for getting the current branch.
+     * | 30e367c timeout code and tests
+     * | 5a09431 add timeout protection to grit
+     * | e1193f8 support for heads with slashes in them
+     |/
+     * d6016bc require time for xmlschema
+     *  11d191e Merge branch 'defunkt' into local
+
 
 
 
