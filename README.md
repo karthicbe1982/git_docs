@@ -221,7 +221,9 @@ Global Git ignore rules
 
     $ git config --global core.excludesFile ~/.gitignore
 
-##You can use git checkout to view the “Make some import changes to hello.txt” commit as follows: Viewing the Commit History
+
+
+## Viewing the Commit History
 
 When you run git log , you should get output that looks something like this:
 
