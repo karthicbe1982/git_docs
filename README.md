@@ -82,9 +82,9 @@ To commit to a repository, use the "commit" command. Next, pass the "commit" com
 
 how can we add modified files to the staging area and commit them at the same time. Git provides the following super command:
 
-    $ git commit -a -m "Do something once more"
+    $ git commit -am "Do something once more"
 
-To Remove the File before change or Un-tracked 
+To Remove the modified file before change or Un-tracked 
 
     $ git checkout file
 
@@ -174,7 +174,7 @@ Alternatively, you can reapply the changes to your working copy and keep them in
 
 Stashing untracked or ignored files
 
-By default, running git stash will stash:
+By default, running "git stash" will stash:
 
     changes that have been added to your index (staged changes)
     changes made to files that are currently tracked by Git (unstaged changes)
